@@ -4,10 +4,12 @@
 
 <table>
   <tr>
-    <td><%= link_to "Delete", @article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td>&nbsp&nbsp&nbsp</td>
-    <td><%= link_to "Edit", edit_article_path %></td>
-    <td>&nbsp&nbsp&nbsp</td>
-    <td><%= link_to "  << Back to articles list  ", articles_path %></td>
+    <td class="article-links"><%= link_to "Delete", @article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="article-links"><%= link_to "Edit", edit_article_path %></td>
+    <td class="article-links"><%= link_to "  << Back to articles list  ", articles_path %></td>
   </tr>
 </table>
+
+<br><h3>Comments</h3>
+
+<%= render partial: 'articles/comment', collection: @article.comments %>
