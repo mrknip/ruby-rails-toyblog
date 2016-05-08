@@ -16,6 +16,9 @@
   </tr>
 </table><br>
 
+<% if @article.image.exists? %>
+  <p><%= image_tag @article.image.url %></p>
+<% end %>
 <p><%= @article.body %></p><br>
 
 
