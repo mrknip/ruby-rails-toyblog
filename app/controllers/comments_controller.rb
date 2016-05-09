@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  # Unregistered users only able to create new comments (Jumpstart labs' idea, not mine!)
+  before_action :require_login, except: [:create]
+
   include CommentsHelper
 
   def create

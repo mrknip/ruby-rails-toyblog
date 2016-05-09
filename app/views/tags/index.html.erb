@@ -1,9 +1,9 @@
 <h1>All tags:</h1>
 <ul>
   <% @tags.sort_by{|t| t.name }.each do |tag| %>
-    <li><%= link_to tag.name, tag_path(tag) %> (<%= link_to "Delete", tag_path(tag),
+    <li><%= link_to tag.name, tag_path(tag) %> <% if logged_in? %> (<%= link_to "Delete", tag_path(tag),
                                                                       method: :delete,
-                                                                      data: {confirm: "Are you sure?"}%>)</li>
+                                                                      data: {confirm: "Are you sure?"}%>)<% end %></li>
   <% end %>
 </ul><br>
 

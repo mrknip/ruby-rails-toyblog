@@ -9,10 +9,12 @@
 <table>
   <tr>
     <td class="article-links"><%= link_to "  << Back to articles list  ", articles_path %></td>
+    <% if logged_in? %>
     <td class="article-links"><%= link_to "Edit", edit_article_path %></td>
     <td class="article-links"><%= link_to "Delete", @article, 
                                                     method: :delete, 
                                                     data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 </table><br>
 

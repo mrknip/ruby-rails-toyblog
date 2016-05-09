@@ -18,4 +18,6 @@ class AuthorSessionsController < ApplicationController
     logout
     redirect_to(articles_path, notice: 'Logged out')
   end
+
+
 end

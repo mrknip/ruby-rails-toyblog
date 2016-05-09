@@ -10,4 +10,6 @@
 
 <%= link_to "Show all tags", tags_path %><br>
 
+<% if logged_in? %>
 <%= link_to "Create a new article", new_article_path, class: 'new_article' %>
+<% end %>
